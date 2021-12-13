@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+section{
+    padding: 10px 50px;
+    text-align: justify;
+    font-family: cursive;
+    background-color: black;
+    color: white;
+    font-size: 20pt;
+    
+}
+::-webkit-scrollbar{
+    width:0;
+}
+#scroll{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255,255,255,0,0.05);
+}
+#progress{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 13px;
+    border-radius: 20px;
+   background: linear-gradient(to top,#008aff , #00ffe7);
+   animation : animate 5s linear infinite;
+
+}
+
+@keyframes animate {
+    0% , 100%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+#progress:before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top,#008aff , #00ffe7);
+    filter: blur(10px);
+
+}
+
+#progress:after{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(to top,#008aff , #00ffe7);
+    filter: blur(30px);
+
+}
